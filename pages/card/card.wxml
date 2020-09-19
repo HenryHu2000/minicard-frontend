@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<template name="card">
+	<view class="card">
+		<text wx:if="{{name != null}}" class="card-name">{{name}}\n</text>
+		<text wx:if="{{title != null}}" class="card-title">{{title}}\n</text>
+		<text wx:if="{{organization != null}}" class="card-organization">{{organization}}\n</text>
+		<text wx:if="{{address != null}}" class="card-address">{{address}}\n</text>
+		<text wx:if="{{postcode != null}}" class="card-postcode">{{postcode}}\n</text>
+		<text wx:if="{{telephone != null}}" class="card-telephone">{{telephone}}\n</text>
+		<text wx:if="{{mobile != null}}" class="card-mobile">{{mobile}}\n</text>
+		<text wx:if="{{fax != null}}" class="card-fax">{{fax}}\n</text>
+		<text wx:if="{{email != null}}" class="card-email">{{email}}\n</text>
+		<text wx:if="{{website != null}}" class="card-website">{{website}}\n</text>
+	</view>
+</template>
+<view class="container">
+	<template is="card" data="{{...card}}" />
+	<image mode="aspectFit" show-menu-by-longpress="true" src="{{qrcodeUrl}}"></image>
+</view>
