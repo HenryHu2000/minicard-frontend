@@ -14,7 +14,7 @@ Page({
       qrcodeUrl: app.globalData.serverURL + "/getcode?id=" + option.id
     });
     wx.request({
-      url: app.globalData.serverURL + '/check',
+      url: app.globalData.serverURL + '/get',
       data: {
         id: this.data.id
       },
